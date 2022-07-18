@@ -1,0 +1,293 @@
+@width: 100%;
+@height: 100%;
+
+@transitiontime1: 0.5s;
+
+.transition1 {
+    transition: @transitiontime1 all;
+    /* Firefox 4 */
+    -moz-transition: @transitiontime1 all;
+    /* Safari 和 Chrome */
+    -webkit-transition: @transitiontime1 all;
+    -o-transition: @transitiontime1 all;
+}
+
+/* 超小设备 (手机, 600px 以下屏幕设备) */
+@media only screen and (max-width: 600px) {
+    #index1 {
+        width: @width;
+        height: @height;
+        background-color: #a7a8bd;
+    }
+
+    #index2 video {
+        display: none;
+    }
+}
+
+/* 小设备 (平板电脑和大型手机，600 像素及以上) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    #index1 {
+        width: @width;
+        height: @height;
+        background-color: #a7a8bd;
+    }
+
+    #index2 video {
+        display: none;
+    }
+}
+
+/* 中型设备（平板电脑，768 像素及以上） */
+@media only screen and (min-width: 768px)and (max-width: 992px) {
+    #index1 {
+        width: @width;
+        height: @height;
+        background-color: #a7a8bd;
+    }
+
+    #index2 video {
+        display: none;
+    }
+}
+
+/* 大型设备（笔记本电脑/台式机，992 像素及以上） */
+@media only screen and (min-width: 992px) {
+    #index1 {
+        width: @width;
+        height: @height;
+    }
+}
+
+#index1 {
+    z-index: 2;
+    .transition1();
+    .context {
+        .context1 {
+            color: #fff;
+            font-size: 3vmax;
+            letter-spacing: 0.5vmax;
+            text-shadow: 0px 0px 1px black;
+        }
+
+        #meet {
+            background-color: #fff;
+            color: black;
+            font-size: 3px;
+            letter-spacing: 1px;
+            width: 80px;
+            border: 2px solid #fff;
+            position: relative;
+            top: 4vmax;
+            transform: scale(1.5);
+            .transition1();
+
+            #meetspan1 {
+                position: relative;
+                left: -6px;
+                letter-spacing: 1px;
+                #meetspan2 {
+                    letter-spacing: -1.5px;
+                    #meetspan3 {
+                        animation: keyframesForBlogIndex1 1s;
+                        /* Safari and Chrome */
+                        -webkit-animation: keyframesForBlogIndex1 1s;
+
+                        animation-iteration-count: infinite;
+                        /*Safari and Chrome*/
+                        -webkit-animation-iteration-count: infinite;
+                    }
+                    #meetspan4 {
+                        visibility: visible;
+                        animation: keyframesForBlogIndex2 1s;
+                        /* Safari and Chrome */
+                        -webkit-animation: keyframesForBlogIndex2 1s;
+
+                        animation-iteration-count: infinite;
+                        /*Safari and Chrome*/
+                        -webkit-animation-iteration-count: infinite;
+                    }
+                    #meetspan5 {
+                        visibility: visible;
+                        animation: keyframesForBlogIndex3 1s;
+                        /* Safari and Chrome */
+                        -webkit-animation: keyframesForBlogIndex3 1s;
+
+                        animation-iteration-count: infinite;
+                        /*Safari and Chrome*/
+                        -webkit-animation-iteration-count: infinite;
+                    }
+                }
+            }
+        }
+
+        #meet:hover {
+            background-color: rgba(255, 255, 255, 0);
+            color: #fff;
+            text-shadow: 0px 0px 1px black;
+        }
+    }
+}
+
+@keyframes keyframesForBlogIndex1 {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0.6;
+    }
+
+    40% {
+        opacity: 0.3;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes keyframesForBlogIndex2 {
+    0% {
+        opacity: 0.6;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    60% {
+        opacity: 0.3;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes keyframesForBlogIndex3 {
+    0% {
+        opacity: 0.3;
+    }
+
+    20% {
+        opacity: 0.6;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    80% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes keyframesForBlogIndex1 {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0.6;
+    }
+
+    40% {
+        opacity: 0.3;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+/* Safari and Chrome */
+@-webkit-keyframes keyframesForBlogIndex2 {
+    0% {
+        text-shadow: 0px 0px 0px #fff;
+    }
+
+    25% {
+        text-shadow: 0px 0px 2px #fff;
+    }
+
+    50% {
+        text-shadow: 0px 0px 4px #fff;
+    }
+
+    75% {
+        text-shadow: 0px 0px 6px #fff;
+    }
+
+    100% {
+        text-shadow: 0px 0px 8px #fff;
+    }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes keyframesForBlogIndex3 {
+    0% {
+        text-shadow: 0px 0px 0px #fff;
+    }
+
+    25% {
+        text-shadow: 0px 0px 2px #fff;
+    }
+
+    50% {
+        text-shadow: 0px 0px 4px #fff;
+    }
+
+    75% {
+        text-shadow: 0px 0px 6px #fff;
+    }
+
+    100% {
+        text-shadow: 0px 0px 8px #fff;
+    }
+}
+
+#index2 video {
+    height: @width;
+    width: @height;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+#live2d-widget {
+    z-index: 999;
+}

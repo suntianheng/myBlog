@@ -1,0 +1,30 @@
+<div id="div1" class="context-area" (contextmenu)="contextMenu($event, menu)">
+
+    <div id="div2">
+        <img nz-image width="200px" height="200px" nzSrc="../../../../assets/zhouhui.jpg" [nzFallback]="fallback" alt="" /> 
+    </div>
+    <nz-result [nzIcon]="'smile-twotone'" [nzTitle]="'浪子回头金不换，衣锦还乡做贤人。'">
+
+        <div nz-result-extra>
+            <button nz-button nzType="primary">Next</button>
+        </div>
+    </nz-result>
+</div>
+
+
+
+
+<nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu>
+        <li nz-menu-item>和谐</li>
+        <li nz-menu-item>友爱</li>
+        <li nz-menu-item>团结</li>
+        <li nz-menu-item>互助</li>
+        <li nz-submenu nzTitle="彼方">
+            <ul>
+                <li nz-menu-item>picture</li>
+                <li nz-menu-item>video</li>
+            </ul>
+        </li>
+    </ul>
+</nz-dropdown-menu>
